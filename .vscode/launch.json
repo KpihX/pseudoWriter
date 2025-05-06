@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Node",
+            "request": "launch",
+            "mainClass": "Node",
+            "projectName": "pseudoWriter_7f8e50b2"
+        },
+        {
+            "type": "java",
+            "request": "launch",
+            "name": "Launch Percolation",
+            "mainClass": "Percolation",
+            "args": "3"
+        }
+    ]
+}
