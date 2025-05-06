@@ -5,8 +5,8 @@ class Node {
     Node next;
 
     public static void main(String[] args) {
+        Node foobar = new Node("foo", new Node("bar", new Node("baz", null)));
         // Test lengthRec
-        // Node foobar = new Node("foo", new Node("bar", new Node("baz", null)));
         // System.out.println("LengthRec of foobar: " + lengthRec(foobar));
 
         // // Test length
@@ -15,9 +15,9 @@ class Node {
         // // Test of makeString
         // System.err.println("String version of foobar: " + makeString(foobar));
 
-        // // Test of addLast
-        // addLast("qux", foobar);
-        // System.err.println("foobar2: " + makeString(foobar));
+        // Test of addLast
+        addLast("qux", foobar);
+        System.err.println("foobar2: " + makeString(foobar));
 
         // // Test of copy
         // Node foobarCopy = copy(foobar);
@@ -87,7 +87,8 @@ class Node {
 
     static Node copy(Node l) {
         if (l == null) {
-            throw new Error("the given list mustn't be empty!");
+            // throw new Error("the given list mustn't be empty!");
+            return null;
         }
         Node lCopy = new Node(l.head, null);
         Node iter = lCopy;
