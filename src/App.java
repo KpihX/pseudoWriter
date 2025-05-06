@@ -10,6 +10,7 @@ public class App {
 
             long start = System.currentTimeMillis();
             long end = System.currentTimeMillis();
+            System.out.println("Hi");
         } catch (NumberFormatException e) {
             System.err.println("You have to provide a non null positive integer value for the number pseudo generation!");
         }

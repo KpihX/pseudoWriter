@@ -3,6 +3,14 @@
     "configurations": [
         {
             "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "pseudoWriter_7f8e50b2",
+            "args": "3"
+        },
+        {
+            "type": "java",
             "name": "WordList",
             "request": "launch",
             "mainClass": "WordList",
@@ -14,13 +22,6 @@
             "request": "launch",
             "mainClass": "Node",
             "projectName": "pseudoWriter_7f8e50b2"
-        },
-        {
-            "type": "java",
-            "request": "launch",
-            "name": "Launch Percolation",
-            "mainClass": "Percolation",
-            "args": "3"
         }
     ]
 }
