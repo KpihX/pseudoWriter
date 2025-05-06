@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "WordList",
+            "request": "launch",
+            "mainClass": "WordList",
+            "projectName": "pseudoWriter_7f8e50b2"
+        },
+        {
+            "type": "java",
             "name": "Node",
             "request": "launch",
             "mainClass": "Node",
