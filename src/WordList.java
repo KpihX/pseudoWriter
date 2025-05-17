@@ -23,11 +23,15 @@ class WordList {
         // WordList wl2 = new WordList(new String[] {});
         // System.out.println(wl2);
 
-        // Test of String[] toArray()
-        String[] tab = foobar.toArray();
-        for (int i=0; i < tab.length; i++) {
-            System.out.print(tab[i] + " ");
-        }
+        // // Test of String[] toArray()
+        // String[] tab = foobar.toArray();
+        // for (int i=0; i < tab.length; i++) {
+        //     System.out.print(tab[i] + " ");
+        // }
+
+        // // Test of mergeSort()
+        // foobar.mergeSort();
+        // System.out.println("foobar sorted: " + foobar);
     }
 
     WordList() {
@@ -127,5 +131,43 @@ class WordList {
         }
 
         return tab;
+    }
+
+    String find(int index) {
+        int curIndex = 0;
+        Node cur = content;
+
+        while ( curIndex < index) {
+            cur = cur.next;
+        }
+        
+        return cur.head;
+    }
+
+    void mergeSort() {
+        int l = Node.length(content);
+        if (l < 2) {
+            return;
+        }
+
+        int i = 0;
+        WordList l1 = new WordList(new Node("", null)), l2 = new WordList(new Node("", null));
+        Node cur1 = l1.content, cur2 = l2.content;
+        for (Node cur=content; cur != null; cur = cur.next) {
+            if (2 * i < l) {
+                cur1.next = new Node(cur.head, null);
+                cur1 = cur1.next;
+            } else {
+                cur2.next = new Node(cur.head, null);
+                cur2 = cur2.next;
+            }
+            i++;
+        }
+
+        l1.content = l1.content.next; // We no more consider the first node of ""; added at the beginning
+        l2.content = l2.content.next;
+        l1.mergeSort();
+        l2.mergeSort();
+        content = Node.merge(l1.content, l2.content);
     }
 }

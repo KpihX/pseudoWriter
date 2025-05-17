@@ -1,7 +1,7 @@
 public class Prefix {
     String[] t;
 
-    final static String start = "<START", end = "<END>", par = "<PAR>";
+    final static String start = "<START>", end = "<END>", par = "<PAR>";
 
     Prefix(int n) {
         t = new String[n];
@@ -35,6 +35,7 @@ public class Prefix {
         for (int i = 0; i < l-1; i++) {
             tab[i] = t[i+1];
         }
+        
         tab[l-1] = w;
         return new Prefix(tab);
     }
@@ -57,7 +58,7 @@ public class Prefix {
         StringBuilder sb = new StringBuilder(t[0]);
         for (int i = 1; i < t.length; i++) {
             sb.append(", ");
-            sb.append(t[0]);
+            sb.append(t[i]);
         }
 
         return sb.toString();

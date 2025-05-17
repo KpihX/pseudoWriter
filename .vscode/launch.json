@@ -3,11 +3,19 @@
     "configurations": [
         {
             "type": "java",
-            "name": "App",
+            "name": "Bovary",
             "request": "launch",
-            "mainClass": "App",
+            "mainClass": "Bovary",
             "projectName": "pseudoWriter_7f8e50b2",
             "args": "3"
+        },
+        {
+            "type": "java",
+            "name": "WordReader",
+            "request": "launch",
+            "mainClass": "WordReader",
+            "projectName": "pseudoWriter_7f8e50b2",
+            "args": "src/bovary/01.txt"
         },
         {
             "type": "java",

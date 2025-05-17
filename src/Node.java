@@ -31,11 +31,18 @@ class Node {
         // System.err.println("l: " + makeString(l));
         // System.err.println("l after insertion: " + makeString(lI));
 
-        // Test insert
-        Node l2 = new Node("kiwi", new Node("yoyo", new Node("age", null)));
-        Node l2Sorted = insertionSort(l2);
-        System.err.println("l2: " + makeString(l2));
-        System.err.println("l2 sorted: " + makeString(l2Sorted));
+        // // Test insert
+        // Node l2 = new Node("kiwi", new Node("yoyo", new Node("age", null)));
+        // Node l2Sorted = insertionSort(l2);
+        // System.err.println("l2: " + makeString(l2));
+        // System.err.println("l2 sorted: " + makeString(l2Sorted));
+
+        // Test of merge
+        Node l3 = new Node("age", new Node("kiwi", new Node("yoyo", null)));
+        Node l4 = new Node("kpihx", new Node("nameless", new Node("shadow", null)));
+        Node l5 = Node.merge(l3, l4);
+        System.out.println(makeString(l3) + "\nl4: " + makeString(l4));
+        System.out.println(makeString(l5));
 
     }
   
@@ -132,5 +139,35 @@ class Node {
         }
 
         return lSorted;
+    }
+
+    static Node merge(Node l1, Node l2) {
+        // if (l1 == null) {
+        //     return Node.copy(l2);
+        // } 
+        // if (l2 == null) {
+        //     return Node.copy(l1);
+        // }
+        Node l = new Node("", null);
+        Node lCur = l;
+        Node cur = l1;
+        Node cur2 = l2;
+        while (cur != null && cur2 != null) {
+            lCur.next = new Node("", null);
+            if (cur.head.compareTo(cur2.head) < 0) {
+                lCur.next.head = cur.head;
+                cur = cur.next;
+            } else {
+                lCur.next.head = cur2.head;
+                cur2 = cur2.next;
+            }
+            lCur = lCur.next;
+        }
+        if (cur == null) { // We copy the rest of elts of l2 in l
+            lCur.next = Node.copy(cur2);
+        } else { // cur2 == null
+            lCur.next = Node.copy(cur);
+        }
+        return l.next;
     }
   }
