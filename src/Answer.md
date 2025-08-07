@@ -1,1 +1,0 @@
-- La liste vide est représentée par un WordList de content = null;

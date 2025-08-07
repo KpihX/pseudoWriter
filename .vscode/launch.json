@@ -6,6 +6,13 @@
             "name": "Bovary",
             "request": "launch",
             "mainClass": "Bovary",
+            "projectName": "pseudoWriter_b5195fc2"
+        },
+        {
+            "type": "java",
+            "name": "Bovary",
+            "request": "launch",
+            "mainClass": "Bovary",
             "projectName": "pseudoWriter_7f8e50b2",
             "args": "3"
         },
