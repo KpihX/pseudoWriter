@@ -6,7 +6,8 @@
             "name": "Bovary",
             "request": "launch",
             "mainClass": "Bovary",
-            "projectName": "pseudoWriter_b5195fc2"
+            "projectName": "pseudoWriter_b5195fc2",
+            "args": "4 bovary"
         },
         {
             "type": "java",
@@ -14,7 +15,7 @@
             "request": "launch",
             "mainClass": "Bovary",
             "projectName": "pseudoWriter_7f8e50b2",
-            "args": "3"
+            "args": "4 bovary"
         },
         {
             "type": "java",
